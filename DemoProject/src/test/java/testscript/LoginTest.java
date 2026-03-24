@@ -34,9 +34,10 @@ public class LoginTest extends Base{
 			String username=ExcelUtility.readStringData(2, 0, "LoginPage");
 			String password=ExcelUtility.readStringData(2, 1, "LoginPage");
 			LoginPage loginpage=new LoginPage(driver);
-			loginpage.enterTheUsername(username);
-			loginpage.enterThePassword(password);
-			loginpage.clickOnSignInButton();
+			
+			loginpage.enterTheUsername(username).enterThePassword(password);
+			//loginpage.enterThePassword(password);
+			homepage=loginpage.clickOnSignInButton();
 			Boolean page=loginpage.isAlertDisplayed();
 			Assert.assertTrue(page);
 	    }
@@ -48,9 +49,9 @@ public class LoginTest extends Base{
 			String username=ExcelUtility.readStringData(3, 0, "LoginPage");
 			String password=ExcelUtility.readStringData(3, 1, "LoginPage");
 			LoginPage loginpage=new LoginPage(driver);
-			loginpage.enterTheUsername(username);
-			loginpage.enterThePassword(password);
-			loginpage.clickOnSignInButton();
+			loginpage.enterTheUsername(username).enterThePassword(password);
+			//loginpage.enterThePassword(password);
+			homepage=loginpage.clickOnSignInButton();
 			
 		}
 		@Test
@@ -61,9 +62,9 @@ public class LoginTest extends Base{
 			String username=ExcelUtility.readStringData(4, 0, "LoginPage");
 			String password=ExcelUtility.readStringData(4, 1, "LoginPage");
 			LoginPage loginpage=new LoginPage(driver);
-			loginpage.enterTheUsername(username);
-			loginpage.enterThePassword(password);
-			loginpage.clickOnSignInButton();
+			loginpage.enterTheUsername(username).enterThePassword(password);
+			//loginpage.enterThePassword(password);
+			homepage=loginpage.clickOnSignInButton();
 		
 		}
 		}
